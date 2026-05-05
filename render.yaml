@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ai-prompt-optimizer
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: WALLET_ADDRESS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
